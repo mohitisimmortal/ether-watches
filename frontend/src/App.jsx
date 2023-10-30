@@ -25,7 +25,7 @@ import UserLogin from "./components/Login/UserLogin";
 import axios from "axios";
 import ShippingInfo from "./components/ShippingInfo/ShippingInfo";
 import Payment from "./components/Payment/Payment";
-import MyOrders from "./components/MyOrders/myOrders";
+import MyOrders from "./components/MyOrders/MyOrders";
 import CollectionDetails from "./components/collections/CollectionDetails";
 import AllOrders from "./components/ADMIN/Dashboard/AllOrders";
 
