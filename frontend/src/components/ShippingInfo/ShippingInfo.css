@@ -1,0 +1,71 @@
+.shipping-info-container {
+    color: white;
+    padding-top: 2rem;
+}
+
+.order-summary h3 {
+    font-size: 1.2rem;
+}
+
+.order-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.order-summary li {
+    margin-bottom: 5px;
+}
+
+/* Shipping information form styles */
+.shipping-form {
+    text-align: left;
+}
+
+.shipping-form h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.shipping-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.shipping-form input[type="text"],
+.shipping-form input[type="number"] {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .shipping-form input[type="text"] {
+        width: 100%;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .order-summary h3 {
+        font-size: 1rem;
+    }
+
+    .shipping-form h3 {
+        font-size: 1rem;
+    }
+
+    .shipping-form label {
+        font-size: 0.9rem;
+    }
+
+    .shipping-form input[type="text"] {
+        font-size: 0.9rem;
+    }
+
+    .place-order-button {
+        font-size: 0.9rem;
+    }
+}

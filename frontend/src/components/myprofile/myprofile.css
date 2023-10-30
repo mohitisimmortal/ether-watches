@@ -1,0 +1,45 @@
+.my-profile-container {
+  color: white;
+  padding-top: 1rem;
+  min-height: 85vh;
+  padding-bottom: 0;
+}
+
+.my-profile-container h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.my-profile-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.profile-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.my-cart-section {
+  margin-top: 24px;
+}
+
+.my-cart-section h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .profile-buttons {
+    gap: 10px;
+  }
+
+  .my-profile-container p {
+    margin-bottom: 10px;
+  }
+
+  .my-profile-container {
+    padding-bottom: 1rem;
+  }
+}

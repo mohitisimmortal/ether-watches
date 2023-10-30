@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --color1: gold;
+  --color2: rgb(143 119 187);
+  --gray-color: gray;
+  scroll-behavior: smooth;
+}
+
+/* CSS Reset */
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: black;
+}
+
+section {
+  padding: 5rem 7%;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* utilities classes ----- */
+.josefin-font {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.globalbtn {
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  font-size: 1.2vmax;
+  border: 1px solid white;
+  padding: .4rem 1rem;
+  border-radius: 50px;
+  letter-spacing: .5px;
+  font-weight: 500;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.globalbtn:hover {
+  background-color: var(--color2);
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.buynowbtn {
+  margin-top: .5rem;
+  font-size: 1.5vmax;
+}
+
+.collectionbtn {
+  margin: 2rem auto;
+  position: relative;
+  left: 43%;
+}
+
+.cta-button {
+  color: rgb(0, 0, 0);
+  border-color: black;
+}
+
+.cta-button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.viewdetails-btn {
+  padding: 0.3rem .7rem;
+}
+
+/* global media queries ---- */
+@media (max-width:768px) {
+  .globalbtn {
+    font-size: 2vmax;
+  }
+
+  .globalbtn {
+    padding: .4rem .8rem;
+  }
+
+  .collectionbtn {
+    left: 38%;
+  }
+
+  section {
+    padding: 5rem 3%;
+  }
+
+  .viewdetails-btn {
+    padding: 0.2rem .5rem;
+    font-size: 10px;
+  }
+}
+
+@media (max-width:500px) {
+  section {
+    padding: 5rem 3%;
+  }
+
+  .collectionbtn {
+    left: 23%;
+  }
+}

@@ -1,0 +1,24 @@
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-field p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.profile-field svg {
+  cursor: pointer;
+  flex: 0.2;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .profile-field svg {
+    flex: 0;
+  }
+}

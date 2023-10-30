@@ -1,0 +1,79 @@
+.men-watches-container {
+    background-image: url('../../assets/menwatch3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    height: 80vh;
+    margin: 2rem;
+    border-radius: 20px;
+}
+
+.women-watches-container {
+    background-image: url('../../assets/new4.jpg');
+}
+
+.men-watches-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.men-watches-content h2 {
+    font-size: 3.5vmax;
+    margin-bottom: 10px;
+}
+
+.men-watches-content p {
+    font-size: 1.7vmax;
+    margin-bottom: 10px;
+}
+
+.men-watches-content h3 {
+    font-size: 2vmax;
+    margin-bottom: 10px;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    .men-watches-content h2 {
+        font-size: 5vmax;
+    }
+
+    .men-watches-content p {
+        font-size: 2.5vmax;
+    }
+
+    .men-watches-content h3 {
+        font-size: 2.7vmax;
+    }
+}
+
+@media (max-width: 500px) {
+    .men-watches-content h2 {
+        font-size: 4vmax;
+    }
+
+    .women-watches-content h2 {
+        font-size: 3.8vmax;
+    }
+
+    .men-watches-content p {
+        font-size: 1.9vmax;
+    }
+
+    .men-watches-container {
+        margin: 1.3rem;
+
+    }
+}

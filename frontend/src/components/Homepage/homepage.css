@@ -1,0 +1,58 @@
+.homepage {
+    color: white;
+    padding: 0;
+}
+
+.homepage-div {
+    height: 90vh;
+    background: url('../../assets/titan.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 7%;
+}
+
+.homepage-content {
+    text-align: left;
+}
+
+.homepage-content h4 {
+    font-size: 4.5vmax;
+    font-weight: 900;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.homepage-content button {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-color: transparent;
+}
+
+.homepage-content button:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+/* media queries */
+@media (max-width:768px) {
+    .homepage-div {
+        padding: 3rem 3%;
+    }
+}
+
+@media (max-width:500px) {
+    .homepage-content {
+        position: relative;
+        top: -5%;
+    }
+}
+
+@media (max-width:350px) {
+    .homepage-div {
+        background-position: 520px;
+    }
+}

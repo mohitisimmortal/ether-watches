@@ -1,0 +1,103 @@
+.new-releases-container {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 3rem;
+}
+
+.new-releases-container h2 {
+    font-size: 3vmax;
+    text-align: center;
+    margin: 2rem 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.watch-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.watch-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: 3px 3px 10px rgb(197, 197, 197);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 250px;
+    text-align: center;
+}
+
+.watch-card:hover {
+    transform: translateY(-5px);
+}
+
+.watch-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.watch-card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 1rem;
+}
+
+.watch-card h3 {
+    font-size: 1.2vmax;
+}
+
+.watch-card p {
+    font-size: 1vmax;
+    color: var(--color2);
+}
+
+/* Responsive CSS */
+@media (min-width: 1300px) {
+    .watch-card {
+        width: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .new-releases-container h2 {
+        font-size: 4vmax;
+        margin: 1rem;
+    }
+
+    .new-releases-container {
+        padding: 1rem;
+        padding-bottom: 3rem;
+    }
+
+    .watch-card h3 {
+        font-size: 1.8vmax;
+    }
+
+    .watch-card p {
+        font-size: 1.5vmax;
+    }
+}
+
+@media (max-width: 565px) {
+    .new-releases-container h2 {
+        font-size: 5vmax;
+    }
+
+    .watch-cards {
+        gap: 1rem;
+    }
+
+    .watch-card h3 {
+        font-size: 1.9vmax;
+    }
+
+    .watch-card div {
+        margin: 1rem;
+    }
+
+}

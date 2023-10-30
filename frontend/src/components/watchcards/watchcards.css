@@ -1,0 +1,157 @@
+/* WatchCards.css */
+.ether-watch-cards-container {
+  min-height: 100vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.filter-button {
+  background: white;
+  border: none;
+  color: black;
+  font-size: 0;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+.filter-button svg {
+  font-size: 2rem;
+}
+
+.ether-watch-filters {
+  background-color: rgb(227, 0, 0);
+  position: absolute;
+  color: white;
+  padding: 1rem;
+  padding-left: 0;
+  z-index: 1;
+  transition: transform 0.3s;
+  transform: translateX(-500%);
+}
+
+.ether-watch-filters.open {
+  transform: translateX(0%);
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+
+.ether-watch-card-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ether-watch-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 2rem;
+  color: white;
+}
+
+.ether-watch-card .left {
+  width: 30%;
+}
+
+.ether-watch-card img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.ether-watch-card h3 {
+  font-size: 2.5vmax;
+  text-transform: capitalize;
+  margin: .5rem 0;
+}
+
+.ether-watch-card p {
+  margin: .5rem 0;
+  font-size: 1.5vmax;
+  color: gray;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .2rem 0;
+  border-radius: 10px;
+}
+
+.pagination-button {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination-dots {
+  color: rgb(255, 255, 255);
+}
+
+.pagination-button:hover {
+  background-color: red;
+}
+
+.pagination-button.current-page {
+  background-color: red;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .ether-watch-card h3 {
+    font-size: 3vmax;
+  }
+
+  .ether-watch-card p {
+    font-size: 2vmax;
+  }
+
+  .ether-watch-card .left {
+    width: 40%;
+  }
+}
+
+@media (max-width: 550px) {
+  .ether-watch-cards-container {
+    padding: 0;
+  }
+
+  .ether-watch-card h3 {
+    font-size: 18px;
+  }
+
+  .ether-watch-card p {
+    font-size: 1.5vmax;
+  }
+
+  .ether-watch-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ether-watch-card .right button {
+    font-size: 1.6vmax;
+  }
+
+  .ether-watch-filters {
+    padding-left: 3%;
+  }
+
+  .filter-button {
+    margin-left: 3%;
+  }
+}

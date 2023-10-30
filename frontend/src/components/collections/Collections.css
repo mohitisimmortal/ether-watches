@@ -1,0 +1,104 @@
+.collection-container {
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 4rem;
+}
+
+.collection-container h2 {
+    font-size: 3vmax;
+    text-align: center;
+    margin: 2rem 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.watch-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.collection-container .watch-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 250px;
+    text-align: center;
+}
+
+.watch-card:hover {
+    transform: translateY(-5px);
+}
+
+.watch-card img {
+    max-width: 100%;
+    height: auto;
+    height: 200px;
+    object-fit: cover;
+}
+
+.watch-card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 1rem;
+}
+
+.watch-card h3 {
+    font-size: 1.2vmax;
+    text-transform: capitalize;
+}
+
+.watch-card p {
+    font-size: 1vmax;
+    color: var(--color2);
+}
+
+/* Responsive CSS */
+@media (min-width: 1300px) {
+    .collection-container .watch-card {
+        width: 20%;
+    }
+
+    .watch-card img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .collection-container h2 {
+        font-size: 4vmax;
+        margin: 1rem;
+    }
+
+    .watch-card h3 {
+        font-size: 1.8vmax;
+    }
+
+    .watch-card p {
+        font-size: 1.5vmax;
+    }
+}
+
+@media (max-width: 565px) {
+    .collection-container h2 {
+        font-size: 3.9vmax;
+    }
+
+    .watch-cards {
+        gap: 1rem;
+    }
+
+    .watch-card h3 {
+        font-size: 1.9vmax;
+    }
+
+    .watch-card div {
+        margin: 1rem;
+    }
+}
