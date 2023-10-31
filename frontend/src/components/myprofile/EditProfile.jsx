@@ -26,6 +26,7 @@ const EditProfile = () => {
         setOpen(true);
     };
 
+    
     const handleSave = async () => {
         try {
             const response = await axios.put(`${baseUrl}/user/update/${user._id}`, {
