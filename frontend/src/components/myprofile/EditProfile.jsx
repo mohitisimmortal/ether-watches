@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './editProfile.css';
+import './editprofile.css';
 import EditIcon from '@mui/icons-material/Edit';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -26,7 +26,7 @@ const EditProfile = () => {
         setOpen(true);
     };
 
-    
+
     const handleSave = async () => {
         try {
             const response = await axios.put(`${baseUrl}/user/update/${user._id}`, {
