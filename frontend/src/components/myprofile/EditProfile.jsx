@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './EditProfile.css';
+import './editProfile.css';
 import EditIcon from '@mui/icons-material/Edit';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
