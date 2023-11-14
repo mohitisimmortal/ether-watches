@@ -22,6 +22,12 @@ const WatchComponent = () => {
     const userData = useRecoilValue(userState); // Get user data from Recoil
 
     const addToCart = () => {
+        // If the user is not logged in, navigate to the login page
+        if (!userToken) {
+            navigate('/login');
+            return;
+        }
+
         // Find the product in the cart by its ID
         const productInCartIndex = cart.findIndex((item) => item._id === id);
 
@@ -179,7 +185,7 @@ const WatchComponent = () => {
                                 <textarea value={review} onChange={(e) => setReview(e.target.value)} placeholder="Write your review" rows='8' style={{ padding: '10px' }}></textarea>
                                 <label style={{ marginBottom: '5px' }}>
                                     Rating: <br />
-                                    <select value={rating} onChange={(e) => setRating(e.target.value)}>
+                                    <select value={rating} onChange={(e) => setRating(e.target.value)} style={{ cursor: 'pointer' }}>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -191,11 +197,12 @@ const WatchComponent = () => {
                             </div>
 
                             <div className="latest-reviews">
-                                <h3>Latest Reviews</h3>
+                                <h3>Latest Reviews :</h3>
                                 <ul>
                                     {watch.reviews.slice(0, 3).map((review, index) => (
                                         <li key={index}>
-                                            <strong>{review.name}</strong>: {review.comment} (Rating: {review.rating})
+                                            <br />
+                                            <strong style={{textTransform:'capitalize'}}>{review.name}</strong>: {review.comment} (Rating: {review.rating})
                                         </li>
                                     ))}
                                 </ul>

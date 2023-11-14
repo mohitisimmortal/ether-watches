@@ -10,7 +10,7 @@ const MyProfile = () => {
 
   return (
     <section className="my-profile-container">
-      <h3>{user.username}</h3>
+      <h3 style={{ textTransform: 'capitalize' }}>{user.username}</h3>
       <p>{user.email}</p>
       <div className="profile-buttons">
         <Link to="/my-orders" className=" globalbtn">

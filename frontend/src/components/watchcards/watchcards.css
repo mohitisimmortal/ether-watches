@@ -57,14 +57,18 @@
 }
 
 .ether-watch-card .left {
-  width: 30%;
+  width: 25%;
+}
+
+.ether-watch-card .right {
+  width: 25%;
 }
 
 .ether-watch-card img {
   object-fit: cover;
   border-radius: 10px;
-  width: 200px;
-  height: 200px;
+  width: 290px;
+  height: 250px;
 }
 
 .ether-watch-card h3 {
@@ -111,7 +115,7 @@
 }
 
 /* Responsive CSS */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .ether-watch-card h3 {
     font-size: 3vmax;
   }
@@ -121,7 +125,11 @@
   }
 
   .ether-watch-card .left {
-    width: 40%;
+    width: 35%;
+  }
+  .ether-watch-card img {
+    width: 220px;
+    height: 200px;
   }
 }
 
@@ -137,7 +145,12 @@
   .ether-watch-card p {
     font-size: 1.5vmax;
   }
-
+  .ether-watch-card .left {
+    width: 50%;
+  }
+  .ether-watch-card .right{
+    width: 30%;
+  }
   .ether-watch-card img {
     width: 150px;
     height: 150px;
