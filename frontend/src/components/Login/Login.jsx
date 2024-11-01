@@ -14,6 +14,7 @@ import { userLoggedInState, userState } from '../../recoil/userAtom';
 import { handleApiError } from '../../reactToastify';
 import { isAdminState } from '../../recoil/adminAtom';
 import baseUrl from '../../baseUrl';
+import { useEffect } from 'react';
 
 export default function Login({ isAdminLogin }) {
   const navigate = useNavigate();
@@ -21,6 +22,12 @@ export default function Login({ isAdminLogin }) {
   const [userLoggedIn, setUserLoggedIn] = useRecoilState(userLoggedInState); // Add this line
   const setIsAdmin = useSetRecoilState(isAdminState); // Add this line
 
+  useEffect(() => {
+    if (userLoggedIn) {
+      navigate('/');
+    }
+  }, [userLoggedIn, navigate]);
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -55,6 +62,8 @@ export default function Login({ isAdminLogin }) {
       handleApiError(error);
     }
   };
+
+  
 
   return (
     <Container component="main" maxWidth="xs" style={{ minHeight: '80vh' }}>

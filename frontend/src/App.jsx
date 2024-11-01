@@ -71,9 +71,7 @@ function App() {
       }
     };
 
-    if (setUserLoggedIn && setIsAdmin) {
-      fetchUserData();
-    }
+    fetchUserData();
 
     // Cleanup the effect
     return () => {
@@ -131,6 +129,7 @@ function App() {
 
           {/* // admin-non-protected-routes  */}
           <Route path="/adminlogin" element={<AdminLogin />} />
+          {/* anyone can setup code locally and made a admin in their local machine(not on main codebase as they haven't access to real database) */}
           {!isProduction && <Route path="/adminsignup" element={<AdminSignup />} />}
 
           <Route path="*" element={<Nopage />} />

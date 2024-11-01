@@ -15,12 +15,19 @@ import { userLoggedInState, userState } from '../../recoil/userAtom';
 import { handleApiError } from '../../reactToastify';
 import { isAdminState } from '../../recoil/adminAtom';
 import baseUrl from '../../baseUrl';
+import { useEffect } from 'react';
 
 export default function SignUp({ isAdminSignup }) {
   const navigate = useNavigate()
   const [user, setUser] = useRecoilState(userState); // Use the Recoil user state
   const [userLoggedIn, setUserLoggedIn] = useRecoilState(userLoggedInState);
   const setIsAdmin = useSetRecoilState(isAdminState)
+
+  useEffect(() => {
+    if (userLoggedIn) {
+      navigate('/');
+    }
+  }, [userLoggedIn, navigate]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
