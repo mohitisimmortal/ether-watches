@@ -23,6 +23,8 @@ const authenticateToken = async (req, res, next) => {
         req.user = {
             username: decodedToken.username,
             role: user.role, // Include role property
+            email: user.email,
+            _id: user._id
         };
 
         next();
