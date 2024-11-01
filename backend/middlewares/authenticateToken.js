@@ -20,10 +20,7 @@ const authenticateToken = async (req, res, next) => {
             return;
         }
 
-        req.user = {
-            username: decodedToken.username,
-            role: user.role, // Include role property
-        };
+        req.user = user; // Attach the complete user object
 
         next();
     } catch (error) {
