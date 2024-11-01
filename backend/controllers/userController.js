@@ -54,21 +54,15 @@ exports.loginUser = async (req, res) => {
 exports.getUserProfile = async (req, res) => {
     try {
         // Extract user data from the request object (set by authenticateToken middleware)
-        const { username } = req.user;
+        const { username, email, role, _id } = req.user; // Destructure properties from req.user
 
-        // Fetch the user from the database
-        const user = await userSchema.findOne({ username });
-
-        if (!user) {
-            return res.status(404).json({ error: 'User not found' });
-        }
 
         // Prepare the user profile data
         const userProfile = {
-            username: user.username,
-            email: user.email,
-            role: user.role,
-            _id: user._id
+            username,
+            email,
+            role,
+            _id
         };
 
         res.status(200).json(userProfile);
